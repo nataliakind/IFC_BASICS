@@ -1,0 +1,186 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif;
+    --dark-green:  rgb(2, 68, 73);
+    --grey:  #d5dbe7 
+
+}
+
+/* ---Header---*/
+header{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  background-color: var(--dark-green);
+  width: 100vw;
+  
+}
+
+.header-container{
+  margin: auto;
+  max-width: 100vw;
+  padding: 0.5rem;
+}
+
+header a{
+  color: white;
+  text-decoration: none;
+  padding: 0 1.8rem;
+}
+
+h1{
+  display: inline;
+}
+
+nav{
+  float: right;
+  margin: 9px;
+}
+
+header li{
+  display: inline;
+  list-style: none;
+}
+
+/*--- footer ---*/
+  footer{
+  color: white;
+  background-color: var(--dark-green);
+  text-align: left;
+  height: 4px;
+  padding: 6rem;
+  }
+
+/*---Viewer ---*/
+
+.app-container{
+display: flex;
+flex-direction: row;
+position: absolute;
+width: 100vw;
+height: 100vh;
+top: 3rem;
+}
+
+.sidebar-left{
+min-width: 20rem;
+height: 100vh;
+border: solid 4px var(--dark-green);
+}
+
+.button-container{
+background-color: var(--grey);
+display: flex;
+height: 3rem;
+border: solid 0.5px var(--dark-green);
+}
+
+.button{
+display: flex;
+align-items: center;
+padding: 0  1rem;
+margin: 0.5rem;
+border: solid 2px var(--dark-green);
+border-radius: 0.2rem;
+user-select: none;
+cursor: pointer;
+transition: background-color 0.2s ease-in-out;
+}
+.button:hover{
+    background-color: var(--dark-green);
+}
+
+.tree-menu{
+background-color: var(--grey);
+height: calc(50% - 1.5rem);
+border: solid 1px var(--dark-green);
+overflow-y: auto;
+}
+.property-menu{
+background-color: var(--grey);
+height: calc(50% - 1.5rem);
+border: solid 1px var(--dark-green);
+overflow-y: auto;
+}
+
+.property-root{
+display: flex;
+flex-direction: row;
+padding: 0.5rem;
+border-bottom: var(--dark-green);
+}
+
+.property-name{
+    width: 40%;
+}
+.property-value{
+width: 60%;
+text-align: right;
+}
+
+#viewer-container{
+    height: 100vh;
+    width: 100%;
+}
+
+.sidebar-right{
+    min-width: 20rem;
+    height: 100vh;
+    background-color:var(--grey) ;
+    }
+
+.location{
+    background-color: var(--grey);
+    height: 50vh;
+    border: solid 1px var(--dark-green);
+    }
+
+#file-input {
+    visibility: collapse;
+}    
+
+/* Remove default bullets */
+ul, #myUL {
+    list-style-type: none;
+  }
+  
+  /* Remove margins and padding from the parent ul */
+  #myUL {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the caret/arrow */
+  .caret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+  }
+  
+  /* Create the caret/arrow with a unicode, and style it */
+  .caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+  }
+  
+  /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+  .caret-down::before {
+    transform: rotate(90deg);
+  }
+  
+  /* Hide the nested list */
+  .nested {
+    display: none;
+    margin-left: 1rem;
+  }
+  
+  /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+  .active {
+    display: block;
+  }
+
+
