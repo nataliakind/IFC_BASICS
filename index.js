@@ -26,11 +26,11 @@ GUI.loader.onclick = () => GUI.input.click();
 GUI.input.onchange = (event) => {
 const file = event.target.files[0];
 const url = URL.createObjectURL(file);
-//const model = await viewer.IFC.loadIfcUrl(url);
+const model = await viewer.IFC.loadIfcUrl(url);
 }
 
 async function loadModel(){
-const model = await viewer.IFC.loadIfcUrl('myIFC.ifc');
+//const model = await viewer.IFC.loadIfcUrl('myIFC.ifc');
 createTreeMenu(model.modelID);
 
 }
