@@ -110219,7 +110219,6 @@ URL.createObjectURL(file);
 async function loadModel(){
 const model = await viewer.IFC.loadIfcUrl('myIFC.ifc');
 createTreeMenu(model.modelID);
-
 }
 
 loadModel();
