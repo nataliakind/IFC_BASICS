@@ -13,7 +13,7 @@
   "dependencies": {
     "three": "^0.134.0",
     "web-ifc": "0.0.28",
-    "web-ifc-viewer": "^1.0.105"
+    "web-ifc-viewer": "^1.0.114"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.1.1",
