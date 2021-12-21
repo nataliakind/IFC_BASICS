@@ -4,9 +4,9 @@
     box-sizing: border-box;
     overflow: hidden;
     font-family: 'Oswald', sans-serif;
-    --dark-green:  rgb(2, 68, 73);
-    --grey:  #d5dbe7 
-
+    --color1: rgb(2, 68, 73);
+    --color2: #d5dbe7;
+    --color3:  white
 }
 
 /* ---Header---*/
@@ -14,7 +14,7 @@ header{
   display: flex;
   flex-direction: row;
   position: absolute;
-  background-color: var(--dark-green);
+  background-color: var(--color1);
   width: 100vw;
   
 }
@@ -26,7 +26,7 @@ header{
 }
 
 header a{
-  color: white;
+  color: var(--color3);
   text-decoration: none;
   padding: 0 1.8rem;
 }
@@ -47,8 +47,8 @@ header li{
 
 /*--- footer ---*/
   footer{
-  color: white;
-  background-color: var(--dark-green);
+  color: var(--color1);
+  background-color: var(--color1);
   text-align: left;
   height: 4px;
   padding: 6rem;
@@ -68,14 +68,14 @@ top: 3rem;
 .sidebar-left{
 min-width: 20rem;
 height: 100vh;
-border: solid 4px var(--dark-green);
+border: solid 4px var(--color1);
 }
 
 .button-container{
-background-color: var(--grey);
+background-color: var(--color2);
 display: flex;
 height: 3rem;
-border: solid 0.5px var(--dark-green);
+border: solid 0.5px var(--color1);
 }
 
 .button{
@@ -83,26 +83,26 @@ display: flex;
 align-items: center;
 padding: 0  1rem;
 margin: 0.5rem;
-border: solid 2px var(--dark-green);
+border: solid 2px var(--color1);
 border-radius: 0.2rem;
 user-select: none;
 cursor: pointer;
 transition: background-color 0.2s ease-in-out;
 }
 .button:hover{
-    background-color: var(--dark-green);
+    background-color: var(--color2);
 }
 
 .tree-menu{
-background-color: var(--grey);
+background-color: var(--color2);
 height: calc(50% - 1.5rem);
-border: solid 1px var(--dark-green);
+border: solid 1px var(--color1);
 overflow-y: auto;
 }
 .property-menu{
-background-color: var(--grey);
+background-color: var(--color2);
 height: calc(50% - 1.5rem);
-border: solid 1px var(--dark-green);
+border: solid 1px var(--color1);
 overflow-y: auto;
 }
 
@@ -110,7 +110,7 @@ overflow-y: auto;
 display: flex;
 flex-direction: row;
 padding: 0.5rem;
-border-bottom: var(--dark-green);
+border-bottom: var(--color1);
 }
 
 .property-name{
@@ -125,18 +125,6 @@ text-align: right;
     height: 100vh;
     width: 100%;
 }
-
-.sidebar-right{
-    min-width: 20rem;
-    height: 100vh;
-    background-color:var(--grey) ;
-    }
-
-.location{
-    background-color: var(--grey);
-    height: 50vh;
-    border: solid 1px var(--dark-green);
-    }
 
 #file-input {
     visibility: collapse;
@@ -162,7 +150,7 @@ ul, #myUL {
   /* Create the caret/arrow with a unicode, and style it */
   .caret::before {
     content: "\25B6";
-    color: black;
+    color: var(--blue3);
     display: inline-block;
     margin-right: 6px;
   }
@@ -184,3 +172,121 @@ ul, #myUL {
   }
 
 
+    .sidebar-right{
+      min-width: 20rem;
+      height: 100vh;
+      border: solid 4px var(--color1);
+      }
+  
+    .map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background-color: var(--color2);
+      height: calc(50% - 1.5rem);
+      border: solid 1px var(--blue3);
+      overflow-y: auto;
+
+     }
+    
+    .heading {
+      background-color: var(--color2);
+      display: flex;
+      height: 3rem;
+      border: solid 0.5px var(--color1);
+      }
+    
+     .listings {
+      background-color: var(--color2);
+      height: calc(50% - 1.5rem);
+      border: solid 1px var(--color1);
+      overflow-y: auto;
+      }
+      
+      .listings .item {
+        border-bottom: 1px solid var(--color1);
+        padding: 10px;
+        text-decoration: none;
+      }
+      
+      .listings .item:last-child { border-bottom: none; }
+      
+      .listings .item .title {
+        display: block;
+        color: var(--color1);
+        font-weight: 700;
+      }
+      
+      .listings .item .title small { font-weight: 400; }
+      
+      .listings .item.active .title,
+      .listings .item .title:hover { color: var(--color3) }
+      
+      .listings .item.active {
+        background-color: var(--blue2);
+      }
+      
+      ::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+        border-left: 0;
+        background: var(--color1);
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: var(--color3);
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: var(--color1);
+        border-radius: 0;
+      }
+    
+      /* Marker tweaks */
+    .mapboxgl-popup-close-button {
+        display: none;
+      }
+      
+      .mapboxgl-popup-content {
+        font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+        padding: 0;
+        width: 180px;
+      }
+      
+      .mapboxgl-popup-content h3 {
+        background: var(--color2);
+        color:var(--yellow1);
+        margin: 0;
+        padding: 10px;
+        border-radius: 3px 3px 0 0;
+        font-weight: 700;
+        margin-top: -15px;
+      }
+      
+      .mapboxgl-popup-content h4 {
+        margin: 0;
+        padding: 10px;
+        font-weight: 400;
+      }
+      
+      .mapboxgl-popup-content div {
+        padding: 10px;
+      }
+      
+      .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+        margin-top: 15px;
+      }
+      
+      .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+        border-bottom-color: var(--color1);
+      }
+      .marker {
+        border: none;
+        cursor: pointer;
+        height: 56px;
+        width: 56px;
+        background-image: url(/Resources/marker.png);
+      }
+      .mapboxgl-popup {
+        padding-bottom: 50px;
+      }
