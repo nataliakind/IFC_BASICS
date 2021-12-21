@@ -76,8 +76,8 @@
         const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v10',
-        center: [8.6877, 50.1083],
-        zoom: 13,
+        center: [8.6320, 50.1081],
+        zoom: 10,
         scrollZoom: false
         });
          
@@ -88,38 +88,19 @@
               'type': 'Feature',
               'geometry': {
               'type': 'Point',
-              'coordinates': [8.6877, 50.1083]
+              'coordinates': [8.6320, 50.1081]
               },
               'properties': {
-              'phoneFormatted': '(202) 234-7336',
-              'phone': '2022347336',
-              'address': '1471 P St NW',
+              'phoneFormatted': 'xxx',
+              'phone': 'xxx',
+              'address': 'Europagarten',
               'city': 'Frankfurt am Main',
               'country': 'Germany',
-              'crossStreet': 'Konstablerwache',
-              'postalCode': '20005',
+              'crossStreet': 'Europaviertel',
+              'postalCode': '60486',
               'state': 'Hessen'
               }
-              },
-              
-              {
-              'type': 'Feature',
-              'geometry': {
-              'type': 'Point',
-              'coordinates': [8.6840, 50.1127]
-              },
-              'properties': {
-              'phoneFormatted': '(202) 507-8357',
-              'phone': '2025078357',
-              'address': '2221 I St NW',
-              'city': 'Frankfurt am Main',
-              'country': 'Germany',
-              'crossStreet': 'Hauptwache',
-              'postalCode': '20005',
-              'state': 'Hessen'
-              }
-              }
-          ]
+              }          ]
         };
          
         /**
@@ -269,7 +250,7 @@
         const popup = new mapboxgl.Popup({ closeOnClick: false })
         .setLngLat(currentFeature.geometry.coordinates)
         .setHTML(
-        `<h3>Projekt</h3><h4>${currentFeature.properties.address}</h4>`
+        `<h3>Station</h3><h4>${currentFeature.properties.address}</h4>`
         )
         .addTo(map);
         }
